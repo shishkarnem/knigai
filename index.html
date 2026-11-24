@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>KnigAI — Нейросетевая фабрика книг</title>
+    <meta
+      name="description"
+      content="Создание персонализированных книг от 1 экземпляра за пару кликов. Сюжет, персонажи, иллюстрации, переплет А5 и печать через партнеров."
+    />
+
+    <!-- Working Browser Tab Favicon (preserved unchanged) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://file.pro-talk.ru/tgf/GgMpJwQ9JCkYKglyGHQMDlkGOR0OTG02WlJzIx4LbjoMZWpCFQlKBighMg8ZEyIJMBssKy0_NlkKRy1RfRIEKHA-GQE4NRQmEV9uZlUAaA11VQJrCjgDAzkkAVczLRouDiMXfQxTNBdFGT8aIyw2ZyIcIQsIKjIuHhtsBXZSBGZ5T3FP.png"
+    />
+
+    <!-- PWA, iOS Safari & Device Icons -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="KnigAI" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Yandex Tableau, BrowserConfig (MS/Edge) & RSS Feed -->
+    <link rel="yandex-tableau-widget" href="/yandex-tableau.json" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <link rel="alternate" type="application/rss+xml" title="KnigAI — Новые книги и обновления" href="/rss.xml" />
+    <link rel="image_src" href="/og-banner-1200x630.png" />
+
+    <!-- OpenGraph Social Card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KnigAI — Нейросетевая фабрика книг" />
+    <meta
+      property="og:description"
+      content="Создание персонализированных книг от 1 экземпляра за пару кликов. Сюжет, персонажи, иллюстрации, переплет А5 и печать через партнеров."
+    />
+    <meta
+      property="og:image"
+      content="https://file.pro-talk.ru/tgf/GTUpJwQ9JCkYKglyGHQMD34GORgHEy8dOhAfKj8lNCMMYzRgLyReBT4ABBkZEyMoDR0eCjU_NmcKWxkEQx0UG3VDdRgpNQQeLA8YFgdnGHEWMGMtN05yTm9kWVx2bl1SGBMkTzhDL1JEJjw_EgstGT0CNywaIC0xBGA3AAwZVgAuOy4GJH9dVHVpW19rZFYD.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="KnigAI" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KnigAI — Нейросетевая фабрика книг" />
+    <meta
+      name="twitter:description"
+      content="Создание персонализированных книг от 1 экземпляра за пару кликов. Сюжет, персонажи, иллюстрации, переплет А5 и печать через партнеров."
+    />
+    <meta
+      name="twitter:image"
+      content="https://file.pro-talk.ru/tgf/GTUpJwQ9JCkYKglyGHQMD34GORgHEy8dOhAfKj8lNCMMYzRgLyReBT4ABBkZEyMoDR0eCjU_NmcKWxkEQx0UG3VDdRgpNQQeLA8YFgdnGHEWMGMtN05yTm9kWVx2bl1SGBMkTzhDL1JEJjw_EgstGT0CNywaIC0xBGA3AAwZVgAuOy4GJH9dVHVpW19rZFYD.jpg"
+    />
+
+    <!-- Google Fonts: 10 Reading Fonts + Rubik Marker Hatch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400;1,7..72,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;600;700&family=Rubik+Marker+Hatch&family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "KnigAI",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "All",
+      "image": "/og-banner-1200x630.png",
+      "description": "Платформа создания персонализированных книг и переплетов А5 с генерацией иллюстраций и печатью тиражей от 1 экземпляра.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "RUB"
+      }
+    }
+    </script>
+    <!-- Telegram Mini App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body class="bg-black text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

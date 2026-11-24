@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KnigAI — Нейросетевая фабрика книг</title>
+    <link>https://knigai.ru/</link>
+    <description>Создание персонализированных книг от 1 экземпляра: сюжет, персонажи, иллюстрации, переплет А5 и печать.</description>
+    <language>ru-RU</language>
+    <image>
+      <url>https://knigai.ru/og-banner-1200x630.png</url>
+      <title>KnigAI</title>
+      <link>https://knigai.ru/</link>
+    </image>
+    <item>
+      <title>KnigAI — Создайте и издайте свою книгу в формате А5</title>
+      <link>https://knigai.ru/</link>
+      <guid>knigai-home</guid>
+      <description>Интерактивный конструктор книг, 100 глав, переплет А5 и читалка.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'PT Serif', Georgia, serif;
+  }
+
+  body {
+    font-family: 'PT Serif', Georgia, serif;
+    min-height: 100vh;
+    background-color: #050505;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Global red scrollbar with 100% transparent track */
+  html, body {
+    scrollbar-color: #ef4444 transparent !important;
+    scrollbar-width: thin !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: transparent !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ef4444 !important;
+    border-radius: 0 !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #dc2626 !important;
+  }
+
+  /* Strict rule: All text >= 14px */
+  * {
+    font-size: max(14px, 1em);
+    box-sizing: border-box;
+    /* Angular edges with zero corner radius across the application */
+    border-radius: 0 !important;
+  }
+}
+
+/* Noir container: zero radius, sharp border with required glass transparency */
+.noir-container {
+  background-color: rgba(12, 12, 15, 0.74);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.08);
+  border-radius: 0 !important;
+}
+
+/* Unified Global Mobile 2% Horizontal Padding Rule:
+   Ensures containers (outer and inner) maintain strictly 2% horizontal padding on mobile devices */
+@media (max-width: 640px) {
+  .noir-container,
+  .noir-card,
+  article,
+  .noir-modal {
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+  }
+}
+
+/* Manga noir modal with stark contrast and required glass transparency */
+.noir-modal {
+  background-color: rgba(10, 10, 12, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.25);
+  border-radius: 0 !important;
+}
+
+/* Red vertical scrollbar on transparent background everywhere in modals */
+.noir-modal *::-webkit-scrollbar,
+.noir-modal::-webkit-scrollbar,
+[role="dialog"] *::-webkit-scrollbar,
+[role="dialog"]::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent !important;
+}
+
+.noir-modal *::-webkit-scrollbar-track,
+.noir-modal::-webkit-scrollbar-track,
+[role="dialog"] *::-webkit-scrollbar-track,
+[role="dialog"]::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+}
+
+.noir-modal *::-webkit-scrollbar-thumb,
+.noir-modal::-webkit-scrollbar-thumb,
+[role="dialog"] *::-webkit-scrollbar-thumb,
+[role="dialog"]::-webkit-scrollbar-thumb {
+  background-color: #ef4444 !important; /* Rose-500 red */
+  border-radius: 0 !important;
+}
+
+.noir-modal *::-webkit-scrollbar-thumb:hover,
+.noir-modal::-webkit-scrollbar-thumb:hover,
+[role="dialog"] *::-webkit-scrollbar-thumb:hover,
+[role="dialog"]::-webkit-scrollbar-thumb:hover {
+  background-color: #dc2626 !important; /* Crimson red */
+}
+
+/* Firefox standard scrollbar for modals */
+.noir-modal,
+.noir-modal *,
+[role="dialog"],
+[role="dialog"] * {
+  scrollbar-color: #ef4444 transparent !important;
+  scrollbar-width: thin !important;
+}
+
+@keyframes markerFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -52;
+  }
+}
+
+/* Primary stark manga button (sharp black/white inverted) */
+.noir-btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+.noir-btn-primary:hover:not(:disabled) {
+  background-color: #e4e4e7;
+  color: #000000;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.6);
+}
+
+.noir-btn-primary:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+
+/* Outline manga noir button */
+.noir-btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+  border-radius: 0 !important;
+}
+
+.noir-btn-outline:hover:not(:disabled) {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Subtle manga surface button */
+.noir-btn-subtle {
+  background-color: #18181b;
+  color: #e4e4e7;
+  border: 1px solid #27272a;
+  border-radius: 0 !important;
+}
+
+.noir-btn-subtle:hover:not(:disabled) {
+  background-color: #27272a;
+  color: #ffffff;
+  border-color: #52525b;
+}
+
+/* Noir input fields */
+.noir-input {
+  background-color: #0d0d10;
+  border: 1px solid #3f3f46;
+  color: #ffffff;
+  border-radius: 0 !important;
+}
+
+.noir-input:focus {
+  border-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 0 1px #ffffff;
+}
+
+/* Screentone pattern disabled on containers for clean transparent look */
+.manga-screentone {
+  background: transparent;
+}
+
+/* Checkerboard for PNG alpha transparency inspection */
+.checkerboard-bg {
+  background-image: 
+    linear-gradient(45deg, #18181b 25%, transparent 25%), 
+    linear-gradient(-45deg, #18181b 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #18181b 75%), 
+    linear-gradient(-45deg, transparent 75%, #18181b 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* Drop-cap for noir manga reader */
+.book-drop-cap::first-letter {
+  float: left;
+  font-size: 3em;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: serif;
+}
+
+/* 3D Corner Curl and Flip Effects */
+.corner-peel-tr, .corner-peel-br, .corner-peel-bl {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  z-index: 30;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.corner-peel-br {
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.85) 65%, rgba(0,0,0,0.4) 66%);
+  box-shadow: -2px -2px 6px rgba(0,0,0,0.3);
+}
+
+.corner-peel-br:hover {
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.5) 50%, #ffffff 65%, rgba(0,0,0,0.5) 66%);
+  box-shadow: -4px -4px 12px rgba(0,0,0,0.5);
+}
+
+.corner-peel-bl {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(225deg, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.85) 65%, rgba(0,0,0,0.4) 66%);
+  box-shadow: 2px -2px 6px rgba(0,0,0,0.3);
+}
+
+.corner-peel-bl:hover {
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(225deg, transparent 50%, rgba(255, 255, 255, 0.5) 50%, #ffffff 65%, rgba(0,0,0,0.5) 66%);
+  box-shadow: 4px -4px 12px rgba(0,0,0,0.5);
+}
+
+.corner-peel-tr {
+  top: 0;
+  right: 0;
+  background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.85) 65%, rgba(0,0,0,0.4) 66%);
+  box-shadow: -2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.corner-peel-tr:hover {
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.5) 50%, #ffffff 65%, rgba(0,0,0,0.5) 66%);
+  box-shadow: -4px 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Prompt Textarea: 2 lines min, 10 lines auto-grow, manual resize, red scrollbar on transparent track */
+.noir-prompt-textarea {
+  min-height: 58px;
+  resize: vertical;
+  scrollbar-color: #ef4444 transparent !important;
+  scrollbar-width: thin !important;
+  background-color: rgba(9, 9, 11, 0.85);
+  border-radius: 0 !important;
+}
+
+.noir-prompt-textarea::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent !important;
+}
+
+.noir-prompt-textarea::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+}
+
+.noir-prompt-textarea::-webkit-scrollbar-thumb {
+  background-color: #ef4444 !important;
+  border-radius: 0 !important;
+}
+
+.noir-prompt-textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #dc2626 !important;
+}
+
+/* Concentric Noir click/tap water/ink ripples */
+@keyframes noirRippleOuter {
+  0% {
+    transform: scale(0.12);
+    opacity: 0.92;
+  }
+  70% {
+    opacity: 0.42;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes noirRippleInner {
+  0% {
+    transform: scale(0.08);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(0.76);
+    opacity: 0;
+  }
+}
+
+.noir-ripple-outer {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: noirRippleOuter 760ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.noir-ripple-inner {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: noirRippleInner 620ms cubic-bezier(0.16, 1, 0.3, 1) 70ms forwards;
+}
+
+/* Preserve Telegram code block line breaks & indentation without breaking mobile width */
+.noir-markdown pre,
+.noir-markdown pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+

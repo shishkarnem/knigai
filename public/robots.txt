@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://knigai.ru/sitemap.xml
+Host: https://knigai.ru

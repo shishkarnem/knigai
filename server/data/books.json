@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1794141023342,
+    "user_uid": 10000000001,
+    "title": "Рапсодия в деревянных тонах",
+    "slug": "rapsodiya-v-derevyannyh-tonah",
+    "subtitle": "Формат А5 (3 глав)",
+    "author": "Джо Мёрфи",
+    "genres": [
+      "Классика",
+      "Беллетристика"
+    ],
+    "target_chapters": 3,
+    "status": "ready",
+    "is_published": true,
+    "format": "fb2.zip",
+    "content_type": "book",
+    "synopsis_overview": "Импортированное произведение «Рапсодия в деревянных тонах» (Джо Мёрфи). Полная версия, 3 глав.",
+    "original_file_url": "https://file.pro-talk.ru/tgf/GgMpJwQ9JCkYKlJzP2IIL1oQCjoELWEjUCMxOBQPDRQtYmhaLi1GYAwqBh4LPl0hAD0sKyAwI3cYQSQiWxQ4FAoxIhMuEREYHQJpFx5KYQ10VAZoeE9xT2ITKSwDIBgyHjAVAw1-KlN6KRMrMhQqHDgUIz1aDHQqE3lqUjodH2B7SXdLaGFeUXxjXVA.zip",
+    "file_storage_id": "41",
+    "cover_config": {
+      "frontTitle": "Рапсодия в деревянных тонах",
+      "frontSubtitle": "Издание формата А5",
+      "authorName": "Джо Мёрфи",
+      "spineText": "Рапсодия в деревянных тонах — Джо Мёрфи",
+      "backBlurb": "Полное издание книги «Рапсодия в деревянных тонах» в формате книжный нуар А5.",
+      "genreLabel": "Художественная литература",
+      "frontImageUrl": "https://file.pro-talk.ru/tgf/GTUpJwQ9JCkYKlJzP2IIL1oQCjoEIhojUCMxPwcvITE7YQhWNjRmJSAmERAxGgw7HQssK20rKEQeDCQiWxQ_GDQRaQoOCHYzHDkcEyNBEHQHUlUQCgN1PyQuUFx3b1lRamRWA2N0Byl0Kz4jAhgvZzwvKWglEAEAFVgrexYRVDZ8HWgCKR1bAzkmQFlpYlAHaQZwVAtoe0E.jpg",
+      "spineColor": "#18181b",
+      "paperType": "cream",
+      "pageCountEstimate": 48,
+      "isbn": "978-5-00-198274-1",
+      "barcodeText": "Издание формата А5"
+    },
+    "created_at": "2026-11-08T12:30:23.343Z",
+    "updated_at": "2026-11-08T12:30:23.343Z"
+  }
+]
